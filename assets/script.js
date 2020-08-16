@@ -19,6 +19,7 @@ var numberChoices = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
 var initiateProgram = function () {
     // establish the main thing... length of password
     var userPromptLength = window.prompt("How long do you want to your password? Has to be between 8 and 120 characters.")
+    // parseInt makes it into a digit
     userPromptLength = parseInt(userPromptLength);
     // console.log(userPromptLength)
 
@@ -42,7 +43,7 @@ var initiateProgram = function () {
             emptyArray = emptyArray.concat(specialCharacters)
         }
     
-        var userPromptNumberChoices = window.confirm("Do you want numbers?")
+        var userPromptNumberChoices = window.confirm("Do you want Numbers?")
         if (userPromptNumberChoices) {
             emptyArray = emptyArray.concat(numberChoices)
         }
@@ -68,8 +69,10 @@ var initiateProgram = function () {
         }
 
         console.log("Password Array: " + passwordArray.join(""))
-        window.alert("Your super-secret " + userPromptLength + " digit password is:" + "\n" + "\n" + passwordArray.join(""))
-    
+
+        // window.alert("Your super-secret " + userPromptLength + " digit password is:" + "\n" + "\n" + passwordArray.join(""))
+
+        document.getElementById("password").innerHTML = "Your super-secret " + userPromptLength + " digit password is:" + "\n" + "\n" + passwordArray.join("")
     }
     
     if (userPromptLength >= 8 && userPromptLength <= 128) {
@@ -86,7 +89,7 @@ var initiateProgram = function () {
 
 
 
-initiateProgram()
+// initiateProgram()
 
 
 

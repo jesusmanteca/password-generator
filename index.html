@@ -3,22 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
     <title>Password Generator</title>
 </head>
 <body>
+    
+    <div class="hero">
+        <h3 class="heroIntro">
+            Click this button to generate a super secret password.
+        </h3>
+    </div>
 
-    <p>
-        Click this button to generate a super secret password.
-    </p>
-    <button onclick="buttonFunction()">
+    <button class="button" onclick="initiateProgram()">
         Password Generator
     </button>
-    <p id="password">
 
-    </p>
-    
+    <div class="passwordDisplay">
+        <h4 id="password">
+        </h4>
+    </div>
 
 
-    <script src="./assets/script.js "></script>
+
+<script src="./assets/script.js "></script>
 </body>
 </html>
