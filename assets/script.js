@@ -20,7 +20,7 @@ var initiateProgram = function () {
     // establish the main thing... length of password
     var userPromptLength = window.prompt("How long do you want to your password? Has to be between 8 and 120 characters.")
     userPromptLength = parseInt(userPromptLength);
-    console.log(userPromptLength)
+    // console.log(userPromptLength)
 
     var emptyArray = [];
 
@@ -46,6 +46,7 @@ var initiateProgram = function () {
         if (userPromptNumberChoices) {
             emptyArray = emptyArray.concat(numberChoices)
         }
+
     
         console.log("Possibilites selected:", emptyArray);
         console.log("emptyArray length:", emptyArray.length);
@@ -57,20 +58,17 @@ var initiateProgram = function () {
         for (i = 0; i < userPromptLength; i++) {
 
             var magicBallNumber = Math.floor(Math.random()*emptyArray.length);
-            console.log("This is the index number: ", magicBallNumber);
+            // console.log("This is the index number: ", magicBallNumber);
 
             var magicBallCharacter = emptyArray[magicBallNumber];
-            console.log("This is the character indexed: ", magicBallCharacter);
+            // console.log("This is the character indexed: ", magicBallCharacter);
 
             passwordArray = passwordArray.concat(magicBallCharacter)
             
         }
 
         console.log("Password Array: " + passwordArray.join(""))
-        window.alert("Your super-secret password is: " + passwordArray.join(""))
-        
-        
-    
+        window.alert("Your super-secret " + userPromptLength + " digit password is:" + "\n" + "\n" + passwordArray.join(""))
     
     }
     
@@ -89,6 +87,8 @@ var initiateProgram = function () {
 
 
 initiateProgram()
+
+
 
 
 
